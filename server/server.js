@@ -6,7 +6,7 @@ await connectDB();
 
 app.listen(env.PORT, () => {
   console.log('=======================================================');
-  console.log(` NEXTCHAT-BOT IS LIVE ON PORT ${env.PORT}`);
+  console.log(` NEXACHAT-BOT IS LIVE ON PORT ${env.PORT}`);
   console.log(' Running API server and loading static assets...');
   console.log('=======================================================');
 });
