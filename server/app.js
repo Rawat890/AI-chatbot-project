@@ -33,7 +33,7 @@ app.use((req, res, next) => {
   if (req.path.startsWith('/api')) return next();
   res.sendFile(path.join(frontendBuildPath, 'index.html'), (err) => {
     if (err) {
-      res.status(200).send('NextChat-Bot Backend running. Frontend dist not detected. Use npm run dev for dev environments.');
+      res.status(200).send('NexaChat-Bot Backend running. Frontend dist not detected. Use npm run dev for dev environments.');
     }
   });
 });
