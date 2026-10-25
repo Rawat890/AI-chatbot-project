@@ -5,8 +5,8 @@ const API_BASE = window.location.port === '5173'
  ? 'http://localhost:5000/api'
  : '/api';
 
-const HARDCODED_PASSWORD = import.meta.env.HARDCODED_PASSWORD;
-
+const HARDCODED_PASSWORD = import.meta.env.VITE_HARDCODED_PASSWORD;
+console.log("Pass -",HARDCODED_PASSWORD)
 
 export default function AdminDashboard() {
  const [authorized, setAuthorized] = useState(false);
