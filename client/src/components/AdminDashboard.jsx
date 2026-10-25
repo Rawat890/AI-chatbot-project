@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 // Resolve backend API address dynamically
 const API_BASE = window.location.port === '5173'
-  ? 'http://localhost:5000/api'
-  : 'https://nexachat-bot-mern.onrender.com/api';
+ ? 'http://localhost:5000/api'
+ : 'https://nexachat-bot-mern.onrender.com/api';
 
 const HARDCODED_PASSWORD = import.meta.env.VITE_HARDCODED_PASSWORD;
 
@@ -43,24 +43,48 @@ export default function AdminDashboard() {
  const fetchDashboardData = async () => {
   setLoading(true);
   try {
-   // Fetch both conversations list and analytics concurrently
-   const [convRes, anaRes] = await Promise.all([
-    fetch(`${API_BASE}/conversations`),
-    fetch(`${API_BASE}/analytics`)
-   ]);
+      // Fetch both conversations list and analytics concurrently
+   const urls = [
+    `${API_BASE}/conversations`,
+    `${API_BASE}/analytics`,
+   ];
 
-   if (convRes.ok && anaRes.ok) {
-    const convData = await convRes.json();
-    const anaData = await anaRes.json();
-    setConversations(convData);
-    setAnalytics(anaData);
+   const [convRes, anaRes] = await Promise.all(
+    urls.map((url) => fetch(url))
+   );
+
+   console.log("Conversations URL:", urls[0], convRes.status);
+   console.log("Analytics URL:", urls[1], anaRes.status);
+
+   if (!convRes.ok || !anaRes.ok) {
+    const convError = !convRes.ok
+     ? await convRes.text()
+     : null;
+
+    const anaError = !anaRes.ok
+     ? await anaRes.text()
+     : null;
+
+    console.error("Conversations error:", convError);
+    console.error("Analytics error:", anaError);
+
+    throw new Error(
+     `API error: conversations=${convRes.status}, analytics=${anaRes.status}`
+    );
    }
+
+   const convData = await convRes.json();
+   const anaData = await anaRes.json();
+
+   setConversations(convData);
+   setAnalytics(anaData);
   } catch (err) {
    console.error("Error fetching admin data:", err);
   } finally {
    setLoading(false);
   }
  };
+
 
  const selectConversation = async (conversation) => {
   setSelectedChat(conversation);
