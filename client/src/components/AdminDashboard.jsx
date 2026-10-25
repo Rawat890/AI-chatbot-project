@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 // Resolve backend API address dynamically
 const API_BASE = window.location.port === '5173'
- ? 'http://localhost:5000/api'
- : '/api';
+  ? 'http://localhost:5000/api'
+  : ' https://nexachat-bot-mern.onrender.com/api';
 
 const HARDCODED_PASSWORD = import.meta.env.VITE_HARDCODED_PASSWORD;
-console.log("Pass -",HARDCODED_PASSWORD)
 
 export default function AdminDashboard() {
  const [authorized, setAuthorized] = useState(false);
