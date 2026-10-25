@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // Resolve backend API address dynamically
 const API_BASE = window.location.port === '5173'
   ? 'http://localhost:5000/api'
-  : ' https://nexachat-bot-mern.onrender.com/api';
+  : 'https://nexachat-bot-mern.onrender.com/api';
 
 const HARDCODED_PASSWORD = import.meta.env.VITE_HARDCODED_PASSWORD;
 

@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 // In production, they are hosted on the same origin (port 5000), so we use relative paths.
 const API_BASE = window.location.port === '5173'
   ? 'http://localhost:5000/api'
-  : ' https://nexachat-bot-mern.onrender.com/api';
+  : 'https://nexachat-bot-mern.onrender.com/api';
 
 export default function WidgetChat() {
  const [visitorId, setVisitorId] = useState(localStorage.getItem('nexaChat_visitor_id') || '');
