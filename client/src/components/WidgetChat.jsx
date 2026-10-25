@@ -91,7 +91,7 @@ export default function WidgetChat() {
     setMessages([
      {
       sender: 'ai',
-      text: `Hi **${data.visitorName}**! I'm the AI Guide for **theshivanshvasu** platform. I see you are a **${professionInput}** aiming to: *"${goalInput.trim()}"*. How can I help you navigate our core tracks (DSA 360, Elevate Full Stack, System Design), notes vault, or handbooks today?`,
+      text: `Hi **${data.visitorName}**! I'm the AI Guide for **therohanrawat** platform. I see you are a **${professionInput}** aiming to: *"${goalInput.trim()}"*. How can I help you navigate our core tracks (DSA 360, Elevate Full Stack, System Design), notes vault, or handbooks today?`,
       createdAt: new Date()
      }
     ]);
@@ -212,7 +212,7 @@ export default function WidgetChat() {
      <div className="d-flex justify-content-between align-items-center pb-3 border-bottom mb-4">
       <div className="d-flex align-items-center gap-2">
        <span className="fs-4">💬</span>
-       <h5 className="mb-0 fw-bold text-dark">VaartaAI Chat bot</h5>
+       <h5 className="mb-0 fw-bold text-dark">NexaChat Chat bot</h5>
       </div>
       <button className="btn btn-sm btn-light border-0" onClick={closeChatWidget} title="Close Widget">
        <i className="bi bi-x-lg text-secondary"></i>
@@ -287,7 +287,7 @@ export default function WidgetChat() {
     <div className="d-flex align-items-center gap-2">
      <span className="fs-4">💬</span>
      <div>
-      <h6 className="mb-0 fw-bold text-dark">VaartaAI Chat bot</h6>
+      <h6 className="mb-0 fw-bold text-dark">NexaChat Chat bot</h6>
       <span className="badge bg-success-subtle text-success border border-success-subtle py-1" style={{ fontSize: '0.7rem' }}>
        Speaking to {visitorName}
       </span>

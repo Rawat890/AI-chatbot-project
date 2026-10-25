@@ -30,9 +30,9 @@ function App() {
       <div className="row justify-content-center">
         <div className="col-md-8 text-center">
           <div className="card shadow-sm border-0 p-5 bg-white">
-            <h1 className="display-5 fw-bold text-dark mb-3">💬 VaartaAI Hub</h1>
+            <h1 className="display-5 fw-bold text-dark mb-3">💬 NexaChat Hub</h1>
             <p className="lead text-muted mb-4" style={{ fontSize: '1.05rem' }}>
-              Welcome to the MERN development dashboard for the <strong>VaartaAI</strong> chatbot widget.
+              Welcome to the MERN development dashboard for the <strong>NexaChat</strong> chatbot widget.
               Below are the routes to test the chat widget frame and admin dashboard directly.
             </p>
             <div className="d-flex justify-content-center gap-3">
@@ -49,11 +49,11 @@ function App() {
               <ul className="text-muted small">
                 <li className="mb-2">Create <code>.env</code> inside the <code>server/</code> folder using <code>.env.example</code>.</li>
                 <li className="mb-2">Run <code>npm run dev</code> at the root to spin up Vite and the Express API server.</li>
-                <li className="mb-2">Open the main root homepage <code>index.html</code> (pointing to <a href="https://theshivanshvasu.com/" target="_blank" rel="noreferrer">https://theshivanshvasu.com/</a> for empty links) to see the floating chatbot widget working live!</li>
+                <li className="mb-2">Open the main root homepage <code>index.html</code> (pointing to <a href="https://therohanrawat.com/" target="_blank" rel="noreferrer">https://therohanrawat.com/</a> for empty links) to see the floating chatbot widget working live!</li>
               </ul>
             </div>
             <div className="text-center pt-3 border-top mt-4 text-muted small" style={{ fontSize: '0.8rem' }}>
-              Powered by <span className="fw-semibold">VaartaAI</span>
+              Powered by <span className="fw-semibold">NexaChat</span>
             </div>
           </div>
         </div>

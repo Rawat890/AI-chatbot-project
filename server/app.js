@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 import { securityHeaders, corsMiddleware } from './src/middlewares/security.js';
-import { apiLimiter } from './src/middlewares/rateLimiter.js';
+import { apiLimiter } from './src/services/rateLimiter.js';
 import { errorHandler } from './src/middlewares/errorHandler.js';
 import routes from './src/routes/index.js';
 
